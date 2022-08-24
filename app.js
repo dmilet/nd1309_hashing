@@ -7,7 +7,7 @@
  * Step 2: Import from crypto-js module the sha265 library
  */
 
-// Write your code here
+ var SHA256 = require("crypto-js/sha256");
 
 /**
  * Variables: Do not change variable values to be able to answer the quiz
@@ -27,12 +27,12 @@ const dataObject = {
  */
 
 function generateHash(obj) {
-	// Write your code here
+	return SHA256(JSON.stringify(obj))
 }
 
-console.log(`SHA256 Hash: ${generateHash(data1)}`);
+console.log(`data1 SHA256 Hash: ${generateHash(data1)}`);
 console.log("************************************");
-console.log(`SHA256 Hash: ${generateHash(dataObject)}`);
+console.log(`dataobject SHA256 Hash: ${generateHash(dataObject)}`);
 
 /**
  * Run your application using `node app.js`
